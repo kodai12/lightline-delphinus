@@ -90,7 +90,7 @@ let g:lightline = {
         \ 'separator': s:separator,
         \ 'subseparator': s:subseparator,
         \ }
-let s:palette = g:lightline#colorscheme#{s:colorscheme}#palette
+let s:palette = g:lightline#colorscheme#{g:lightline_delphinus_colorscheme}#palette
 let s:palette.tabline.tabsel = [ [ '#d0d0d0', '#5f8787', 252, 66, 'bold' ] ]
 unlet s:palette
 let g:lightline.tabline = {
