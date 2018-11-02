@@ -41,8 +41,7 @@ let g:lightline = {
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gitgutter' ], [ 'filepath' ], [ 'filename', 'currenttag', 'ale_error', 'ale_warning', 'ale_ok' ] ],
         \   'right': [
-        \     [ 'lineinfo' ],
-        \     [ 'percent' ],
+        \     [ 'percent', 'lineinfo' ],
         \     [ 'char_code', 'fileformat', 'fileencoding', 'filetype' ],
         \   ],
         \ },
