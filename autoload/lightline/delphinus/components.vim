@@ -8,9 +8,9 @@
 scriptencoding utf-8
 
 if g:lightline_delphinus_use_nerd_fonts_glyphs
-  let s:mo_glyph = "\uf040 " " 
-  let s:help_glyph = "\uf128" " 
-  let s:ale_linting_glyph = " \uf250  " " 
+  let s:mo_glyph = " "
+  let s:help_glyph = ""
+  let s:ale_linting_glyph = "   "
 else
   let s:mo_glyph = '+'
   let s:help_glyph = '?'
@@ -18,7 +18,7 @@ else
 endif
 
 if g:lightline_delphinus_use_powerline_glyphs
-  let s:ro_glyph = "\ue0a2" " 
+  let s:ro_glyph = ""
 else
   let s:ro_glyph = 'RO'
 endif
