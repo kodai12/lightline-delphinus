@@ -53,6 +53,9 @@ let g:lightline = {
         \ 'component': {
         \   'sky_color_clock': "%#SkyColorClock#%{' ' . sky_color_clock#statusline() . ' '}%#SkyColorClockTemp# ",
         \ },
+        \ 'component_raw': {
+        \   'sky_color_clock': 1,
+        \ },
         \ 'component_function': {
         \   'modified':     'lightline#delphinus#components#modified',
         \   'readonly':     'lightline#delphinus#components#readonly',
