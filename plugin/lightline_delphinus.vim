@@ -1,8 +1,8 @@
 " =============================================================================
 " Filename: plugin/lightline_delphinus.vim
-" Author: delphinus
+" Author: sakochik
 " License: MIT License
-" Last Change: 2018-10-27T09:45:50+0900.
+" Last Change: 2018-11-3T09:45:50+0900.
 " =============================================================================
 
 scriptencoding utf-8
@@ -50,6 +50,9 @@ let g:lightline = {
         \   'left': [ [ 'filepath' ], [ 'filename' ] ],
         \   'right': [ [ 'lineinfo' ], [ 'percent' ] ],
         \ },
+        \ 'component': {
+        \   'sky_color_clock': "%#SkyColorClock#%{' ' . sky_color_clock#statusline() . ' '}%#SkyColorClockTemp# ",
+        \ },
         \ 'component_function': {
         \   'modified':     'lightline#delphinus#components#modified',
         \   'readonly':     'lightline#delphinus#components#readonly',
@@ -87,6 +90,28 @@ let g:lightline = {
         \ 'separator': s:separator,
         \ 'subseparator': s:subseparator,
         \ }
+let s:palette = g:lightline#colorscheme#{s:colorscheme}#palette
+let s:palette.tabline.tabsel = [ [ '#d0d0d0', '#5f8787', 252, 66, 'bold' ] ]
+unlet s:palette
+let g:lightline.tabline = {
+      \ 'left': [ [ 'tabs' ] ],
+      \ 'right': [ [ 'sky_color_clock' ] ] }
+let g:lightline.tab = {
+      \ 'active': [ 'tabnum', 'filename', 'modified' ],
+      \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
+      \ }
+let g:lightline.tab_component_function = {
+      \ 'filename': 'MyTabFilename',
+      \ 'modified': 'lightline#tab#modified',
+      \ 'readonly': 'lightline#tab#readonly',
+      \ 'tabnum': 'lightline#tab#tabnum' }
+
+function! MyTabFilename(n) abort
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  let _ = pathshorten(expand('#'.buflist[winnr - 1].':f'))
+  return _ !=# '' ? _ : '[No Name]'
+endfunction
 
 augroup LightLineOnALE
   autocmd!
