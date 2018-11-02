@@ -39,14 +39,19 @@ let g:lightline_delphinus_gitgutter_enable = 0
 let g:lightline = {
         \ 'colorscheme': g:lightline_delphinus_colorscheme,
         \ 'active': {
-        \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gitgutter' ], [ 'filepath' ], [ 'filename', 'currenttag', 'ale_error', 'ale_warning', 'ale_ok' ] ],
+        \   'left': [
+        \     [ 'mode', 'paste', 'readonly' ],
+        \     [ 'fugitive', 'gitgutter' ],
+        \     [ 'filepath' ],
+        \     [ 'filename', 'currenttag' ]
+        \   ],
         \   'right': [
-        \     [ 'percent', 'lineinfo' ],
-        \     [ 'char_code', 'fileformat', 'fileencoding', 'filetype' ],
+        \     [ 'lineinfo', 'percent' ],
+        \     [ 'ale_error', 'ale_warning', 'ale_ok' ],
+        \     [ 'fileformat', 'fileencoding', 'filetype' ]
         \   ],
         \ },
         \ 'inactive': {
-        \   'left': [ [ 'filepath' ], [ 'filename' ] ],
         \   'right': [ [ 'lineinfo' ], [ 'percent' ] ],
         \ },
         \ 'component': {
@@ -105,7 +110,7 @@ let g:lightline.tab = {
 let g:lightline.tab_component_function = {
       \ 'filename': 'MyTabFilename',
       \ 'modified': 'lightline#tab#modified',
-      \ 'readonly': 'lightline#tab#readonly',
+      \ 'readonly': 'lightline#delphinus#components#readonly',
       \ 'tabnum': 'lightline#tab#tabnum' }
 
 function! MyTabFilename(n) abort
