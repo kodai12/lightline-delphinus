@@ -76,8 +76,8 @@ let g:lightline = {
         \   'percent':      'lightline#delphinus#components#percent',
         \   'currenttag':   'lightline#delphinus#components#currenttag',
         \   'gitgutter':    'lightline#delphinus#components#gitgutter',
-        \   'toggl_task': 'toggl#task#print',
-        \   'toggl_time': 'toggl#time#print',
+        \   'toggl_task': 'toggl#task',
+        \   'toggl_time': 'toggl#time',
         \ },
         \ 'component_function_visible_condition': {
         \   'mode': 1,
