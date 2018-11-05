@@ -48,7 +48,8 @@ let g:lightline = {
         \   'right': [
         \     [ 'lineinfo',  'percent' ],
         \     [ 'ale_error', 'ale_warning', 'ale_ok' ],
-        \     [ 'fileformat', 'fileencoding', 'filetype' ]
+        \     [ 'fileformat', 'fileencoding', 'filetype' ],
+        \     [ 'toggle_task', 'toggle_time' ]
         \   ],
         \ },
         \ 'inactive': {
@@ -104,7 +105,7 @@ let s:palette.tabline.tabsel = [ [ '#d0d0d0', '#5f8787', 252, 66, 'bold' ] ]
 unlet s:palette
 let g:lightline.tabline = {
       \ 'left': [ [ 'tabs' ] ],
-      \ 'right': [ [ 'toggle_task', 'toggle_time', 'sky_color_clock' ] ] }
+      \ 'right': [ [ 'sky_color_clock' ] ] }
 let g:lightline.tab = {
       \ 'active': [ 'tabnum', 'filename', 'modified' ],
       \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
