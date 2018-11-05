@@ -46,10 +46,9 @@ let g:lightline = {
         \     [ 'filename', 'currenttag' ]
         \   ],
         \   'right': [
-        \     [ 'lineinfo',  'percent' ],
+        \     [ 'toggle_task', 'toggle_time', 'lineinfo',  'percent' ],
         \     [ 'ale_error', 'ale_warning', 'ale_ok' ],
         \     [ 'fileformat', 'fileencoding', 'filetype' ],
-        \     [ 'toggle_task', 'toggle_time' ]
         \   ],
         \ },
         \ 'inactive': {
