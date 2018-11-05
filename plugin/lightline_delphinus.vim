@@ -46,7 +46,7 @@ let g:lightline = {
         \     [ 'filename', 'currenttag' ]
         \   ],
         \   'right': [
-        \     [ 'lineinfo', 'percent' ],
+        \     [ 'toggle_task', 'toggle_time','lineinfo',  'percent' ],
         \     [ 'ale_error', 'ale_warning', 'ale_ok' ],
         \     [ 'fileformat', 'fileencoding', 'filetype' ]
         \   ],
@@ -75,6 +75,8 @@ let g:lightline = {
         \   'percent':      'lightline#delphinus#components#percent',
         \   'currenttag':   'lightline#delphinus#components#currenttag',
         \   'gitgutter':    'lightline#delphinus#components#gitgutter',
+        \   'toggl_task': 'toggl#task',
+        \   'toggl_time': 'toggl#time',
         \ },
         \ 'component_function_visible_condition': {
         \   'mode': 1,
