@@ -46,9 +46,9 @@ let g:lightline = {
         \     [ 'filename', 'currenttag' ]
         \   ],
         \   'right': [
-        \     [ 'lineinfo',  'percent' ],
+        \     [ 'lineinfo',  'percent', 'sky_color_clock' ],
         \     [ 'ale_error', 'ale_warning', 'ale_ok' ],
-        \     [ 'fileformat', 'fileencoding', 'filetype' ],
+        \     [ 'fileencoding', 'filetype' ],
         \   ],
         \ },
         \ 'inactive': {
@@ -99,12 +99,6 @@ let g:lightline = {
         \ 'separator': s:separator,
         \ 'subseparator': s:subseparator,
         \ }
-let s:palette = g:lightline#colorscheme#{g:lightline_delphinus_colorscheme}#palette
-let s:palette.tabline.tabsel = [ [ '#d0d0d0', '#5f8787', 252, 66, 'bold' ] ]
-unlet s:palette
-let g:lightline.tabline = {
-      \ 'right': [ [ 'toggl_task', 'toggl_time', 'sky_color_clock' ] ]
-      \ }
 
 augroup LightLineOnALE
   autocmd!
