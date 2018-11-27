@@ -103,8 +103,8 @@ let s:palette = g:lightline#colorscheme#{g:lightline_delphinus_colorscheme}#pale
 let s:palette.tabline.tabsel = [ [ '#d0d0d0', '#5f8787', 252, 66, 'bold' ] ]
 unlet s:palette
 let g:lightline.tabline = {
-      \ 'left': [ [ 'tabs' ] ],
-      \ 'right': [ [ 'toggl_task', 'toggl_time', 'sky_color_clock' ] ] }
+      \ 'right': [ [ 'toggl_task', 'toggl_time', 'sky_color_clock' ] ]
+      \ }
 let g:lightline.tab = {
       \ 'active': [ 'tabnum', 'filename', 'modified' ],
       \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
