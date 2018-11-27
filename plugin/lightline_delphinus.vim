@@ -31,12 +31,10 @@ if g:lightline_delphinus_colorscheme !=# 'solarized_improved' && g:lightline_del
   call lightline#error('g:lightline_delphinus_colorscheme must be solarized_improved (default) or nord_improved')
 endif
 
-let g:lightline_delphinus_tagbar_enable = 1
-let g:tagbar_status_func = 'lightline#delphinus#components#tagbar_status'
-
 let g:lightline_delphinus_gitgutter_enable = 1
 
 let g:lightline = {
+        \ 'enable': { 'tabline': 0 },
         \ 'colorscheme': g:lightline_delphinus_colorscheme,
         \ 'active': {
         \   'left': [
