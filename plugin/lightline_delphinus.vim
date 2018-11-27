@@ -105,22 +105,6 @@ unlet s:palette
 let g:lightline.tabline = {
       \ 'right': [ [ 'toggl_task', 'toggl_time', 'sky_color_clock' ] ]
       \ }
-let g:lightline.tab = {
-      \ 'active': [ 'tabnum', 'filename', 'modified' ],
-      \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
-      \ }
-let g:lightline.tab_component_function = {
-      \ 'filename': 'MyTabFilename',
-      \ 'modified': 'lightline#tab#modified',
-      \ 'readonly': 'lightline#delphinus#components#readonly',
-      \ 'tabnum': 'lightline#tab#tabnum' }
-
-function! MyTabFilename(n) abort
-  let buflist = tabpagebuflist(a:n)
-  let winnr = tabpagewinnr(a:n)
-  let _ = pathshorten(expand('#'.buflist[winnr - 1].':f'))
-  return _ !=# '' ? _ : '[No Name]'
-endfunction
 
 augroup LightLineOnALE
   autocmd!
