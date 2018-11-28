@@ -26,8 +26,7 @@ else
   let s:subseparator = {'left': '|', 'right': '|'}
 endif
 
-" CHANGING COLORSHEME HERE
-let g:lightline_delphinus_colorscheme = 'spring-night'
+let g:lightline_delphinus_colorscheme = get(g:, 'lightline_delphinus_colorscheme', 'nord_improved')
 
 let g:lightline_delphinus_gitgutter_enable = 1
 
