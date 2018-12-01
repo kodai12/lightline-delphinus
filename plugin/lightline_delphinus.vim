@@ -27,9 +27,6 @@ else
 endif
 
 let g:lightline_delphinus_colorscheme = get(g:, 'lightline_delphinus_colorscheme', 'solarized_improved')
-if g:lightline_delphinus_colorscheme !=# 'solarized_improved' && g:lightline_delphinus_colorscheme !=# 'nord_improved'
-  call lightline#error('g:lightline_delphinus_colorscheme must be solarized_improved (default) or nord_improved')
-endif
 
 let g:lightline_delphinus_gitgutter_enable = 1
 
